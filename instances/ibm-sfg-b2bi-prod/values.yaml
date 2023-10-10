@@ -36,7 +36,7 @@ ibm-sfg-prod:
     fsGroup: 1010
     runAsUser: 1010
   dataSetup:
-    enabled: false
+    enabled: true
     upgrade: false
   env:
     tz: "UTC"
@@ -60,11 +60,11 @@ ibm-sfg-prod:
     nistComplianceMode: "off"
     # Provide the DB attributes
     dbVendor: db2
-    dbHost: 172.30.17.246
+    dbHost: 172.30.52.238
     dbPort: 50000
     dbData: B2BIDB
     dbDrivers: db2jcc4.jar
-    dbCreateSchema: false
+    dbCreateSchema: true
     # Name of DB secret
     dbSecret: b2b-db-secret
     #Provide the admin email address
@@ -80,9 +80,9 @@ ibm-sfg-prod:
     jmsConnectionFactory: com.ibm.mq.jms.MQQueueConnectionFactory
     jmsConnectionFactoryInstantiator:
     jmsQueueName: DEV.QUEUE.1
-    jmsHost: 172.30.196.174
+    jmsHost: 172.30.113.49
     jmsPort: 1414
-    jmsConnectionNameList: 172.30.196.174(1414)
+    jmsConnectionNameList: 172.30.113.49(1414)
     jmsEnableSsl: false
     jmsChannel: DEV.APP.SVRCONN
     # Name of JMS secret if available
@@ -91,7 +91,7 @@ ibm-sfg-prod:
     #SANDBOX_WEBAPP_PROTOCOL: https
     #SANDBOX_WEBAPP_LIST_PORT: 5001
   asi:
-    replicaCount: 2
+    replicaCount: 1
 
     resources:
       limits:
@@ -102,10 +102,10 @@ ibm-sfg-prod:
         memory: 4Gi
 
     autoscaling:
-      enabled: true
+      enabled: false
       minReplicas: 2
       maxReplicas: 4
-      targetCPUUtilizationPercentage: 10
+      targetCPUUtilizationPercentage: 60
 
     frontendService:
       type: ClusterIP
@@ -167,7 +167,7 @@ ibm-sfg-prod:
         #    servicePort: "my-http"
         #    enableHttps: false
   ac:
-    replicaCount: 2
+    replicaCount: 1
     resources:
       limits:
         cpu: 4000m
@@ -177,10 +177,10 @@ ibm-sfg-prod:
         memory: 4Gi
 
     autoscaling:
-      enabled: true
+      enabled: false
       minReplicas: 2
       maxReplicas: 4
-      targetCPUUtilizationPercentage: 10
+      targetCPUUtilizationPercentage: 60
 
     frontendService:
       type: ClusterIP
