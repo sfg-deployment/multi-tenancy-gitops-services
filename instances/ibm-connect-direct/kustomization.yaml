@@ -1,4 +1,0 @@
-resources:
-- configmap/cd-configmap.yaml
-- service/cd-service.yaml
-- deployment/cd-statefulset.yaml

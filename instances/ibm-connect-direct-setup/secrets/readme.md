@@ -1,1 +1,0 @@
-Reach out to Raafat@ibm.com for the secrets
