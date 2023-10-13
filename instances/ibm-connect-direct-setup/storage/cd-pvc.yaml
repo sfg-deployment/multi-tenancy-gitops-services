@@ -14,7 +14,7 @@ metadata:
 spec:
   # If present, use the storageClassName from the values.yaml, else use the
   # default storage class, setting nil means using default storage class
-  storageClassName: "ocs-storagecluster-cephfs"
+  storageClassName: "ocs-storagecluster-ceph-rbd"
   accessModes:
     - "ReadWriteOnce"
   resources:
