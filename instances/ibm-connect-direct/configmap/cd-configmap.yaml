@@ -22,7 +22,7 @@ data:
     cdai_localNodeName=cdnode
     cdai_serverPort=1364
     cdai_clientPort=1363
-    cdai_localCertFile=certificate1
+    cdai_localCertFile=certificate_file1
     cdai_fileAgentEnable=n
     cdai_localCertLabel=Client-API
     cdai_trustedAddr=
