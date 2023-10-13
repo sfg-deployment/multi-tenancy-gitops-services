@@ -23,7 +23,7 @@ data:
     cdai_serverPort=1364
     cdai_clientPort=1363
     cdai_localCertFile=certificate_file1
-    cdai_appuser_name=appuser
+    cdai_appuser_name=cduser
     cdai_appuser_uid=
     cdai_appuser_gid=  
     cdai_admin_uid=1000
