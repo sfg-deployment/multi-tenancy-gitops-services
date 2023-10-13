@@ -12,7 +12,7 @@ ibm-sccm:
 
   image:
     repository: "cp.icr.io/cp/ibm-scc/ibmscc"
-    tag: "621_ifix06"
+    tag: "6.3.0.0_ifix01_2023-01-15"
     imageSecrets: "ibm-entitlement-key"
     digest:
       enabled: false
